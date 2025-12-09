@@ -89,10 +89,10 @@ To make the project accessible to reviewers, several screenshots are included:
 ![Overview](images/Overview.png)
 
 ### **Performance Metrics**
-![Performance Metrics](images/Performance2.png)
+![Performance Metrics](images/Performance25threshold.png)
 
 ### **Confusion Matrix + Report**
-![Confusion Matrix](images/Performance3.png)
+![Confusion Matrix](images/Performance50threshold.png)
 
 ### **Customer Explorer**
 ![Customer Explorer](images/CustomerExplorer.png)
