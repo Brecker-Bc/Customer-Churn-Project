@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# OS files (Mac)
+.DS_Store
+
+# Data files
+data/*.csv
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# Streamlit
+.streamlit/
