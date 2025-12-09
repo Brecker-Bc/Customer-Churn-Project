@@ -76,3 +76,42 @@ Interpretation:
 - The model captures most true churners while accepting some false positives, which is usually the right trade off for retention use cases.
 
 ---
+
+
+
+
+## Dashboard Preview
+
+Because this project depends on a **local PostgreSQL instance**, the full dashboard cannot run directly on Streamlit Cloud.  
+To make the project accessible to reviewers, several screenshots are included:
+
+### **Model Overview**
+![Overview](images/Overview.png)
+
+### **Performance Metrics**
+![Performance Metrics](images/Performance2.png)
+
+### **Confusion Matrix + Report**
+![Confusion Matrix](images/Performance3.png)
+
+### **Customer Explorer**
+![Customer Explorer](images/CustomerExplorer.png)
+
+These images show the UI and outputs exactly as they appear when running the dashboard locally.
+
+---
+
+## Running Locally
+
+This project requires:
+
+- Local PostgreSQL (with a database named `churn_db`)
+- A `.env` or configured connection string inside `utils/db.py`
+
+Because Streamlit Cloud cannot connect to local databases, the dashboard must be run on your own machine.
+
+If you want to run it yourself:
+
+```bash
+pip install -r requirements.txt
+streamlit run src/dashboard/streamlit_app.py
