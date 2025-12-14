@@ -38,8 +38,8 @@ def main():
     )
 
     model = RandomForestClassifier(
-        n_estimators=1000,
-        max_depth=8,
+        n_estimators=750,
+        max_depth=10,
         random_state=42,
         class_weight="balanced",
     )

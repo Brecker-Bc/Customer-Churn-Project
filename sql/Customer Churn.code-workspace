@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Customer Churn",
+			"path": ".."
+		},
+		{
+			"name": "Images:Churn",
+			"path": "../../Images:Churn"
+		}
+	],
+	"settings": {}
+}
