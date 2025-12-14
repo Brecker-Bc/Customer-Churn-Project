@@ -15,9 +15,7 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# -------------------------------------------------------------------
-# Make sure we can import utils.db (project root on sys.path)
-# -------------------------------------------------------------------
+
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
@@ -106,16 +104,12 @@ def main():
     y_true = df["churn_label"].values
     y_proba = df["churn_probability"].values
 
-    # -------------------------------------------------------------------
-    # Tabs: Overview | EDA | Model performance | Customer explorer
-    # -------------------------------------------------------------------
+  
     tab_overview, tab_eda, tab_model, tab_customers = st.tabs(
         ["Overview", "EDA", "Model performance", "Customer explorer"]
     )
 
-    # -------------------------------------------------------------------
-    # OVERVIEW
-    # -------------------------------------------------------------------
+
     with tab_overview:
         col1, col2, col3, col4 = st.columns(4)
 
@@ -142,9 +136,6 @@ def main():
             df.groupby("contract")["churn_probability"].mean().sort_values()
         )
 
-    # -------------------------------------------------------------------
-    # EDA (similar spirit to the notebook)
-    # -------------------------------------------------------------------
     with tab_eda:
         st.subheader("Churn rate by contract type")
         churn_by_contract = (
@@ -198,9 +189,7 @@ def main():
             "are all strongly related to churn behavior._"
         )
 
-    # -------------------------------------------------------------------
-    # MODEL PERFORMANCE
-    # -------------------------------------------------------------------
+
     with tab_model:
         st.subheader("Model performance")
 
@@ -236,9 +225,7 @@ def main():
             "real churn-retention scenario._"
         )
 
-    # -------------------------------------------------------------------
-    # CUSTOMER EXPLORER
-    # -------------------------------------------------------------------
+    
     with tab_customers:
         st.subheader("Customer explorer")
 
